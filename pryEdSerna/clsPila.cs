@@ -1,76 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 
 namespace pryEdSerna
 {
-    internal class clsCola
+    internal class clsPila
     {
+        //Campos de las clase
         private clsNodo pri;
-        private clsNodo ult;
 
+        //Propiedades de la clase 
         public clsNodo Primero
         {
             get { return pri; }
             set { pri = value; }
         }
 
-        public clsNodo Ultimo
-        {
-            get { return ult; }
-            set { ult = value; }
-        }
-
+        //Metodos de la clase
         public void Agregar(clsNodo Nuevo)
         {
             if (Primero == null)
             {
                 Primero = Nuevo;
-                Ultimo = Nuevo;
             }
             else
             {
-                Ultimo.Siguiente = Nuevo;
-                Ultimo = Nuevo;
+                Nuevo.Siguiente = Primero;
+                Primero = Nuevo;
             }
-        }
-        public void Agregar()
-        {
-            StreamReader AD = new StreamReader("Cola.csv");
-            String dato = "";
-            dato=AD.ReadLine(); //Titulo
-            dato = AD.ReadLine();//Reglon vacio
-            dato = AD.ReadLine();//Titulos de columna
-            dato = AD.ReadLine();//primera fila con datos
-            while(dato != null)
-            {
-                clsNodo Persona= new clsNodo();
-                String[] datos = dato.Split(';');
-                Persona.Codigo=Convert.ToInt32(datos[0]);
-                Persona.Nombre = datos[1];
-                Persona.Tramite = datos[2];
-
-                Agregar(Persona);
-                dato = AD.ReadLine();
-
-            }
-            AD.Close();
-
         }
         public void Eliminar()
         {
-            if (Primero == Ultimo)
+            if(Primero != null)
             {
-                Primero = null;
-                Ultimo = null;
-            }
-            else
-            {
-                Primero = Primero.Siguiente;
+                Primero= Primero.Siguiente;
             }
         }
         public void Recorrer(DataGridView Grilla)
@@ -106,8 +73,8 @@ namespace pryEdSerna
 
         public void Recorrer()
         {
-            clsNodo aux= Primero;
-            StreamWriter AD= new StreamWriter("Cola.csv", false, Encoding.UTF8);
+            clsNodo aux = Primero;
+            StreamWriter AD = new StreamWriter("Cola.csv", false, Encoding.UTF8);
             AD.WriteLine("Lista de espera\n");
             AD.WriteLine("Código;Nombre;Trámite");
             while (aux != null)
@@ -117,10 +84,9 @@ namespace pryEdSerna
                 AD.Write(aux.Nombre);
                 AD.Write(";");
                 AD.WriteLine(aux.Tramite);
-                aux= aux.Siguiente;
+                aux = aux.Siguiente;
             }
             AD.Close();
         }
-
     }
 }
