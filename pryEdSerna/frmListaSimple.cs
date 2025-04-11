@@ -69,7 +69,7 @@ namespace pryEdSerna
         {
           if(Lista.Primero != null)
           {
-                Int32 x = Convert.ToInt32(cmbCodigo);
+                Int32 x = Convert.ToInt32(cmbCodigo.Text);
                 Lista.Eliminar(x);
                 Lista.Recorrer();
                 Lista.Recorrer(dgvListaSimple);
@@ -95,11 +95,11 @@ namespace pryEdSerna
 
             if(cmbCodigo.SelectedIndex != -1)
             {
-                btnAgregar.Enabled = false;
+                btnEliminar.Enabled = true;
             }
             else
             {
-                btnAgregar.Enabled=true;
+                btnEliminar.Enabled=false;
             }
         }
     }
