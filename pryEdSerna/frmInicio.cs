@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pryEdSerna
 {
-    public partial class Form1 : Form
+    public partial class frmInicio : Form
     {
-        public Form1()
+        public frmInicio()
         {
             InitializeComponent();
         }
@@ -71,6 +71,11 @@ namespace pryEdSerna
         {
             frmListaDoble v = new frmListaDoble();
             v.ShowDialog();
+        }
+
+        private void mesesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

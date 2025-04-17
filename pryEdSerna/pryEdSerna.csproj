@@ -53,11 +53,17 @@
     <Compile Include="clsNodo.cs" />
     <Compile Include="clsPila.cs" />
     <Compile Include="ClsProvincias.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="frmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmInicio.Designer.cs">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmArbolBinario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArbolBinario.Designer.cs">
+      <DependentUpon>frmArbolBinario.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCiudades.cs">
       <SubType>Form</SubType>
@@ -95,6 +101,12 @@
     <Compile Include="frmListaSimple.Designer.cs">
       <DependentUpon>frmListaSimple.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMeses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMeses.Designer.cs">
+      <DependentUpon>frmMeses.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPila.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,8 +121,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmInicio.resx">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmArbolBinario.resx">
+      <DependentUpon>frmArbolBinario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCiudades.resx">
       <DependentUpon>frmCiudades.cs</DependentUpon>

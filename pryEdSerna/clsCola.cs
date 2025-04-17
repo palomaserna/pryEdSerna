@@ -38,7 +38,7 @@ namespace pryEdSerna
                 Ultimo = Nuevo;
             }
         }
-        public void Agregar()
+        /*public void Agregar()
         {
             StreamReader AD = new StreamReader("Cola.csv");
             String dato = "";
@@ -60,7 +60,7 @@ namespace pryEdSerna
             }
             AD.Close();
 
-        }
+        *///}
         public void Eliminar()
         {
             if (Primero == Ultimo)

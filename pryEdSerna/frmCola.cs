@@ -20,7 +20,7 @@ namespace pryEdSerna
 
         private void frmCola_Load(object sender, EventArgs e)
         {
-            FilaPersonas.Agregar();//Leo los datos del archivo
+            //FilaPersonas.Agregar();//Leo los datos del archivo
             FilaPersonas.Recorrer();//Grabo archivo
             FilaPersonas.Recorrer(dgvCola);//Muestro en grilla
             FilaPersonas.Recorrer(lstCola);//Muestra en lista
