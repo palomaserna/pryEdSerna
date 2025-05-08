@@ -22,7 +22,7 @@ namespace pryEdSerna
         {
             if (File.Exists("Pila.csv"))
             {
-                FilaPila.Agregar();
+              //  FilaPila.Agregar();
                 FilaPila.Recorrer();//Grabo archivo
                 FilaPila.Recorrer(dgvPila);//Muestro en grilla
                 FilaPila.Recorrer(lstPila);//Muestra en lista

@@ -88,7 +88,7 @@ namespace pryEdSerna
             }
             AD.Close();
         }
-        public void Agregar()
+       /* public void Agregar()
         {
             StreamReader AD = new StreamReader("Pila.csv");
             string dato = "";
@@ -113,7 +113,7 @@ namespace pryEdSerna
             AD.Close();
 
 
-        }
+        *///}
        
 
     }

@@ -23,7 +23,7 @@ namespace pryEdSerna
         {
             if (File.Exists("ListaDoble.csv"))
             {
-                ListaDoble.Agregar();
+                //ListaDoble.Agregar();
                 Opts();
 
             }
@@ -51,7 +51,7 @@ namespace pryEdSerna
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            int x = Convert.ToInt32(cmbCodigo.Text;
+            int x = Convert.ToInt32(cmbCodigo.Text);
             ListaDoble.Eliminar(x);
 
             Opts();

@@ -159,7 +159,7 @@ namespace pryEdSerna
             }
             AD.Close();
         }
-        public void Agregar()
+        /*public void Agregar()
         {
             StreamReader AD = new StreamReader("ListaDoble.csv");
             string dato = "";
@@ -181,9 +181,9 @@ namespace pryEdSerna
                 dato = AD.ReadLine();
             }
 
-            AD.Close();
+           */// AD.Close();
 
-        }
+        //}
         //Descente
 
         public void RecorrerDs(DataGridView Grilla)

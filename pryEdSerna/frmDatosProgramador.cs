@@ -16,5 +16,7 @@ namespace pryEdSerna
         {
             InitializeComponent();
         }
+
+       
     }
 }

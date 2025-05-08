@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDatosProgramador));
             this.grpDatos = new System.Windows.Forms.GroupBox();
             this.lblEstructura = new System.Windows.Forms.Label();
+            this.lblNomyApe = new System.Windows.Forms.Label();
             this.lblMateria = new System.Windows.Forms.Label();
             this.lblTercero = new System.Windows.Forms.Label();
             this.lblSemestre = new System.Windows.Forms.Label();
@@ -43,8 +44,9 @@
             this.lblNumero = new System.Windows.Forms.Label();
             this.lblEdad = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.lblNomyApe = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grpDatos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // grpDatos
@@ -68,7 +70,7 @@
             this.grpDatos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(74)))), ((int)(((byte)(64)))));
             this.grpDatos.Location = new System.Drawing.Point(38, 35);
             this.grpDatos.Name = "grpDatos";
-            this.grpDatos.Size = new System.Drawing.Size(672, 579);
+            this.grpDatos.Size = new System.Drawing.Size(465, 579);
             this.grpDatos.TabIndex = 0;
             this.grpDatos.TabStop = false;
             this.grpDatos.Text = "Datos";
@@ -83,6 +85,17 @@
             this.lblEstructura.Size = new System.Drawing.Size(148, 22);
             this.lblEstructura.TabIndex = 13;
             this.lblEstructura.Text = "Estructura de Datos";
+            // 
+            // lblNomyApe
+            // 
+            this.lblNomyApe.AutoSize = true;
+            this.lblNomyApe.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomyApe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(74)))), ((int)(((byte)(64)))));
+            this.lblNomyApe.Location = new System.Drawing.Point(15, 36);
+            this.lblNomyApe.Name = "lblNomyApe";
+            this.lblNomyApe.Size = new System.Drawing.Size(138, 22);
+            this.lblNomyApe.TabIndex = 0;
+            this.lblNomyApe.Text = "Nombre Completo";
             // 
             // lblMateria
             // 
@@ -216,16 +229,16 @@
             this.lblNombre.TabIndex = 1;
             this.lblNombre.Text = "Paloma Araceli Serna";
             // 
-            // lblNomyApe
+            // pictureBox1
             // 
-            this.lblNomyApe.AutoSize = true;
-            this.lblNomyApe.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomyApe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(74)))), ((int)(((byte)(64)))));
-            this.lblNomyApe.Location = new System.Drawing.Point(15, 36);
-            this.lblNomyApe.Name = "lblNomyApe";
-            this.lblNomyApe.Size = new System.Drawing.Size(138, 22);
-            this.lblNomyApe.TabIndex = 0;
-            this.lblNomyApe.Text = "Nombre Completo";
+            this.pictureBox1.BackColor = System.Drawing.Color.OldLace;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(696, 71);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(292, 497);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // frmDatosProgramador
             // 
@@ -233,11 +246,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1124, 669);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.grpDatos);
             this.Name = "frmDatosProgramador";
             this.Text = "frmDatosProgramador";
             this.grpDatos.ResumeLayout(false);
             this.grpDatos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -259,5 +274,6 @@
         private System.Windows.Forms.Label lblSemestre;
         private System.Windows.Forms.Label lblEstructura;
         private System.Windows.Forms.Label lblMateria;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
