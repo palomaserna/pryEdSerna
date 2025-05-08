@@ -24,12 +24,13 @@ namespace pryEdSerna
 
         private void datosDelDesarrolladorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmDatosProgramador v = new frmDatosProgramador();
+            v.ShowDialog();
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void programacionOrientadaAObjetosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -46,6 +47,16 @@ namespace pryEdSerna
         private void provinciasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmProvincias v = new frmProvincias();
+            v.ShowDialog();
+        }
+        private void mesesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMeses v = new frmMeses();
+            v.ShowDialog();
+        }
+        private void díasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDias v = new frmDias();
             v.ShowDialog();
         }
 
@@ -73,9 +84,12 @@ namespace pryEdSerna
             v.ShowDialog();
         }
 
-        private void mesesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+       
 
+        private void árbolBinarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmArbolBinario v = new frmArbolBinario();
+            v.ShowDialog();
         }
     }
 }

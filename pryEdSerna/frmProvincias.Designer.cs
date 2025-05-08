@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProvincias));
             this.txtProvincias = new System.Windows.Forms.TextBox();
             this.btnGrabarP = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,46 +42,50 @@
             // 
             // txtProvincias
             // 
-            this.txtProvincias.Location = new System.Drawing.Point(113, 38);
-            this.txtProvincias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtProvincias.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtProvincias.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProvincias.Location = new System.Drawing.Point(299, 52);
             this.txtProvincias.Name = "txtProvincias";
-            this.txtProvincias.Size = new System.Drawing.Size(109, 20);
+            this.txtProvincias.Size = new System.Drawing.Size(162, 27);
             this.txtProvincias.TabIndex = 0;
             this.txtProvincias.TextChanged += new System.EventHandler(this.txtProvincias_TextChanged);
             // 
             // btnGrabarP
             // 
-            this.btnGrabarP.Location = new System.Drawing.Point(188, 114);
-            this.btnGrabarP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGrabarP.BackColor = System.Drawing.Color.DarkSalmon;
+            this.btnGrabarP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGrabarP.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGrabarP.Location = new System.Drawing.Point(299, 198);
             this.btnGrabarP.Name = "btnGrabarP";
-            this.btnGrabarP.Size = new System.Drawing.Size(57, 20);
+            this.btnGrabarP.Size = new System.Drawing.Size(116, 45);
             this.btnGrabarP.TabIndex = 1;
             this.btnGrabarP.Text = "Grabar";
-            this.btnGrabarP.UseVisualStyleBackColor = true;
+            this.btnGrabarP.UseVisualStyleBackColor = false;
             this.btnGrabarP.Click += new System.EventHandler(this.btnGrabarP_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(63, 38);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(237)))), ((int)(((byte)(220)))));
+            this.label1.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(207, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.Size = new System.Drawing.Size(70, 22);
             this.label1.TabIndex = 2;
             this.label1.Text = "Nombre:";
             // 
             // dgvProvincias
             // 
+            this.dgvProvincias.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(237)))), ((int)(((byte)(220)))));
             this.dgvProvincias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProvincias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            this.dgvProvincias.Location = new System.Drawing.Point(11, 153);
-            this.dgvProvincias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvProvincias.Location = new System.Drawing.Point(134, 281);
             this.dgvProvincias.Name = "dgvProvincias";
             this.dgvProvincias.RowHeadersWidth = 62;
             this.dgvProvincias.RowTemplate.Height = 28;
-            this.dgvProvincias.Size = new System.Drawing.Size(356, 128);
+            this.dgvProvincias.Size = new System.Drawing.Size(534, 197);
             this.dgvProvincias.TabIndex = 3;
             // 
             // Column1
@@ -99,36 +104,39 @@
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(113, 75);
-            this.txtCodigo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCodigo.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.Location = new System.Drawing.Point(299, 109);
             this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(109, 20);
+            this.txtCodigo.Size = new System.Drawing.Size(162, 27);
             this.txtCodigo.TabIndex = 4;
             this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(65, 75);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(237)))), ((int)(((byte)(220)))));
+            this.label2.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(213, 112);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.Size = new System.Drawing.Size(65, 22);
             this.label2.TabIndex = 5;
             this.label2.Text = "Codigo:";
             // 
             // frmProvincias
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(394, 292);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(839, 611);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.dgvProvincias);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnGrabarP);
             this.Controls.Add(this.txtProvincias);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmProvincias";
             this.Text = "frmProvincias";
             this.Load += new System.EventHandler(this.frmProvincias_Load);

@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
+
 
 namespace pryEdSerna
 {
@@ -24,21 +24,29 @@ namespace pryEdSerna
         {
             ControlarTxt();
             txtCodigo.Select();
-            x.NombreArchivo = "Provincias.txt";
+            x.NombreArchivo = "Provincias.csv";
             if (File.Exists(x.NombreArchivo)) x.Recorrer(dgvProvincias);
             //x.Recorrer(dgvProvincias);
         }
 
         private void btnGrabarP_Click(object sender, EventArgs e)
         {
-            String Datos = "";
-            Datos=txtCodigo.Text + ";" + txtProvincias.Text;    
-            x.Grabar(Datos);
-            x.Recorrer(dgvProvincias);
-            MessageBox.Show("Dato grabado exitosamente...", "Proceso Exitoso");
-            txtProvincias.Text = "";
-            txtCodigo.Text = "";
-            txtCodigo.Select();
+            if (txtProvincias.Text == "")
+            {
+                MessageBox.Show("Dato incorrecto");
+            }
+            else
+            {
+                String Datos = "";
+                Datos = txtCodigo.Text + ";" + txtProvincias.Text;
+                x.Grabar(Datos);
+                x.Recorrer(dgvProvincias);
+                MessageBox.Show("Dato grabado exitosamente...", "Proceso Exitoso");
+                txtProvincias.Text = "";
+                txtCodigo.Text = "";
+                
+            }
+           
         }
 
         private void txtProvincias_TextChanged(object sender, EventArgs e)

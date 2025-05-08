@@ -59,10 +59,10 @@ namespace pryEdSerna
                             aux = aux.Siguiente;
 
                         }
-                        nuevo.Anterior= ant;
-                        nuevo.Siguiente= aux;
-                        aux.Anterior = nuevo;
                         ant.Siguiente = nuevo;
+                        nuevo.Siguiente = aux;
+                        nuevo.Anterior = ant;
+                        aux.Anterior = nuevo;
 
                     }
                 }
@@ -107,7 +107,7 @@ namespace pryEdSerna
             }
         }
 
-
+        
         public void RecorrerAs(DataGridView Grilla)
         {
             clsNodo aux = Primero;
@@ -118,16 +118,7 @@ namespace pryEdSerna
                 aux= aux.Siguiente;
             }
         }
-        public void RecorrerDs(DataGridView Grilla)
-        {
-            clsNodo aux = Ultimo;
-            Grilla.Rows.Clear();
-            while (aux != null)
-            {
-                Grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
-                aux = aux.Anterior;
-            }
-        }
+       
         public void Recorrer(ListBox Lista)
         {
             clsNodo aux = Primero;
@@ -168,5 +159,96 @@ namespace pryEdSerna
             }
             AD.Close();
         }
+        public void Agregar()
+        {
+            StreamReader AD = new StreamReader("ListaDoble.csv");
+            string dato = "";
+            dato= AD.ReadLine(); //Titulo
+            dato = AD.ReadLine(); //Renglon vacio
+            dato = AD.ReadLine(); //Titulos de columna
+            dato = AD.ReadLine(); //Primera fila con datos
+
+            while (dato != null)
+            {
+                clsNodo Persona = new clsNodo();
+                string[] datos = dato.Split(';');
+
+                Persona.Codigo = Convert.ToInt32(datos[0]);
+                Persona.Nombre = datos[1];
+                Persona.Tramite = datos[2];
+
+                Agregar(Persona);
+                dato = AD.ReadLine();
+            }
+
+            AD.Close();
+
+        }
+        //Descente
+
+        public void RecorrerDs(DataGridView Grilla)
+        {
+            clsNodo aux = Ultimo;
+            Grilla.Rows.Clear();
+            while (aux != null)
+            {
+                Grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
+                aux = aux.Anterior;
+            }
+        }
+        public void RecorrerD(DataGridView Grilla)
+        {
+            clsNodo aux = Ultimo;
+            Grilla.Rows.Clear();
+            while (aux != null)
+            {
+                Grilla.Rows.Add(aux.Codigo, aux.Nombre, aux.Tramite);
+                aux = aux.Anterior;
+            }
+        }
+
+        public void RecorrerD(ListBox Lista)
+        {
+            clsNodo aux = Ultimo;
+            Lista.Items.Clear();
+            while (aux != null)
+            {
+                Lista.Items.Add(aux.Codigo);
+                aux = aux.Anterior;
+            }
+        }
+
+        public void RecorrerD(ComboBox Combo)
+        {
+            clsNodo aux = Ultimo;
+            Combo.Items.Clear();
+            while (aux != null)
+            {
+                Combo.Items.Add(aux.Codigo);
+                aux = aux.Anterior;
+            }
+        }
+
+        public void RecorrerD()
+        {
+            clsNodo aux = Ultimo;
+
+            StreamWriter AD = new StreamWriter("ListaDoble.csv", false, Encoding.UTF8);
+            AD.WriteLine("Lista de espera\n");
+            AD.WriteLine("Codigo;Nombre;Tramite");
+            while (aux != null)
+            {
+                AD.Write(aux.Codigo);
+                AD.Write(";");
+                AD.Write(aux.Nombre);
+                AD.Write(";");
+                AD.WriteLine(aux.Tramite);
+                aux = aux.Anterior;
+            }
+            AD.Close();
+        }
+
+      
+       
     }
 }

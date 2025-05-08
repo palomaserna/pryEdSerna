@@ -39,18 +39,35 @@ namespace pryEdSerna
             }
             AD.Close();
         }
-        public void Recorrer(DataGridView lista)
+        public void Recorrer(DataGridView Grilla)
         {
             StreamReader AD = new StreamReader(NombreArchivo);
-            string Dato = "";
+            String Dato = "";
             Dato = AD.ReadLine();
-            lista.Rows.Clear();
+            Grilla.Rows.Clear();
             while (Dato != null)
             {
-                lista.Rows.Add(Dato);
+                Grilla.Rows.Add(Dato.Split(';'));
                 Dato = AD.ReadLine();
             }
             AD.Close();
+        }
+        public void Recorrer(ComboBox cmb)
+        {
+            StreamReader AD = new StreamReader(NombreArchivo);
+            String Dato = "";
+            Dato = AD.ReadLine();
+            cmb.Items.Clear();
+
+            while (Dato != null)
+            {
+                cmb.Items.Add(Dato);
+                Dato = AD.ReadLine();
+
+
+            }
+            AD.Close();
+
         }
     }
 }

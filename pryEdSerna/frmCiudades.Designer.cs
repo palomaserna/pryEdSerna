@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCiudades));
             this.label1 = new System.Windows.Forms.Label();
             this.txtCiudades = new System.Windows.Forms.TextBox();
             this.btnGrabar = new System.Windows.Forms.Button();
@@ -37,44 +38,55 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(62, 67);
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(237)))), ((int)(((byte)(220)))));
+            this.label1.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(251, 152);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 20);
+            this.label1.Size = new System.Drawing.Size(70, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre:";
             // 
             // txtCiudades
             // 
-            this.txtCiudades.Location = new System.Drawing.Point(142, 64);
+            this.txtCiudades.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCiudades.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCiudades.Location = new System.Drawing.Point(338, 147);
             this.txtCiudades.Name = "txtCiudades";
-            this.txtCiudades.Size = new System.Drawing.Size(166, 26);
+            this.txtCiudades.Size = new System.Drawing.Size(166, 27);
             this.txtCiudades.TabIndex = 1;
             // 
             // btnGrabar
             // 
-            this.btnGrabar.Location = new System.Drawing.Point(218, 125);
+            this.btnGrabar.BackColor = System.Drawing.Color.DarkSalmon;
+            this.btnGrabar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGrabar.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGrabar.Location = new System.Drawing.Point(352, 218);
             this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(99, 28);
+            this.btnGrabar.Size = new System.Drawing.Size(118, 44);
             this.btnGrabar.TabIndex = 2;
             this.btnGrabar.Text = "Grabar";
-            this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.UseVisualStyleBackColor = false;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // lstCiudades
             // 
+            this.lstCiudades.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(237)))), ((int)(((byte)(220)))));
+            this.lstCiudades.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstCiudades.FormattingEnabled = true;
             this.lstCiudades.ItemHeight = 20;
-            this.lstCiudades.Location = new System.Drawing.Point(66, 180);
+            this.lstCiudades.Location = new System.Drawing.Point(212, 303);
             this.lstCiudades.Name = "lstCiudades";
-            this.lstCiudades.Size = new System.Drawing.Size(271, 224);
+            this.lstCiudades.Size = new System.Drawing.Size(417, 244);
             this.lstCiudades.TabIndex = 3;
             // 
             // frmCiudades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(593, 450);
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(920, 668);
             this.Controls.Add(this.lstCiudades);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.txtCiudades);

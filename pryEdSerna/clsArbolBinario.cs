@@ -163,6 +163,17 @@ namespace pryEdSerna
             Grilla.Rows.Clear();
             InOrdenAsc(Grilla, Raiz);
         }
+        public void RecorrerPre(DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            PreOrden(Grilla, Raiz);
+        }
+
+        public void RecorrerPost(DataGridView Grilla)
+        {
+            Grilla.Rows.Clear();
+            PostOrden(Grilla, Raiz);
+        }
         private void InOrdenAsc(DataGridView dgv, clsNodo R)
         {
             if (R.Izquierdo != null)
@@ -187,30 +198,30 @@ namespace pryEdSerna
                 InOrdenDesc(Lst,R.Izquierdo);
             }
         }
-        public void PreOrden(ListBox Lst, clsNodo R)
+        public void PreOrden(DataGridView Grilla, clsNodo R)
         {
-            Lst.Items.Add(R.Codigo);
+            Grilla.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
             if(R.Izquierdo!= null)
             {
-                PreOrden(Lst, R.Izquierdo);
+                PreOrden(Grilla, R.Izquierdo);
             }
             if(R.Derecho != null)
             {
-                PreOrden(Lst, R.Derecho);
+                PreOrden(Grilla, R.Derecho);
             }
         }
-        public void PostOrden(ListBox Lst, clsNodo R)
+        public void PostOrden(DataGridView Grilla, clsNodo R)
         {
             if (R.Izquierdo != null)
             {
-                PostOrden(Lst,R.Izquierdo);
+                PostOrden(Grilla,R.Izquierdo);
             }
             if(R.Derecho != null)
             {
-                PostOrden(Lst, R.Derecho);
+                PostOrden(Grilla, R.Derecho);
 
             }
-            Lst.Items.Add(R.Codigo);
+            Grilla.Rows.Add(R.Codigo, R.Nombre, R.Tramite);
         }
 
 

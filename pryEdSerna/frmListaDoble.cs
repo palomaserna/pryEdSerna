@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +19,46 @@ namespace pryEdSerna
             InitializeComponent();
         }
         clsListaDoble ListaDoble=new clsListaDoble();
+        private void frmListaDoble_Load(object sender, EventArgs e)
+        {
+            if (File.Exists("ListaDoble.csv"))
+            {
+                ListaDoble.Agregar();
+                Opts();
 
+            }
+           
+           
+
+        }
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+            clsNodo Persona = new clsNodo();
+            Persona.Codigo = Convert.ToInt32(txtCodigo.Text);
+            Persona.Nombre = txtNombre.Text;
+            Persona.Tramite = txtTramite.Text;
+
+            ListaDoble.Agregar(Persona);
+            Opts();
+
+
+            txtCodigo.Clear();
+            txtNombre.Clear();
+            txtTramite.Clear();
+            btnAgregar.Enabled = false;
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            int x = Convert.ToInt32(cmbCodigo.Text;
+            ListaDoble.Eliminar(x);
+
+            Opts();
+           
+        }
+
+       
         private void ValidarDatos()
         {
             if (txtCodigo.Text != "" && txtNombre.Text != "" && txtTramite.Text != "")
@@ -47,55 +87,9 @@ namespace pryEdSerna
             ValidarDatos();
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
+      
 
-            clsNodo Persona = new clsNodo();
-            Persona.Codigo = Convert.ToInt32(txtCodigo.Text);
-            Persona.Nombre = txtNombre.Text;
-            Persona.Tramite = txtTramite.Text;
-
-            ListaDoble.Agregar(Persona);
-
-            ListaDoble.Recorrer();
-            ListaDoble.RecorrerAs(dgvLDoble);
-            ListaDoble.RecorrerDs(dgvLDoble);
-            ListaDoble.Recorrer(lstLDoble);
-            ListaDoble.Recorrer(cmbCodigo);
-
-
-
-            txtCodigo.Clear();
-            txtNombre.Clear();
-            txtTramite.Clear();
-            btnAgregar.Enabled = false;
-        }
-
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            if (ListaDoble.Primero != null)
-            {
-                Int32 x = Convert.ToInt32(cmbCodigo.Text);
-                ListaDoble.Eliminar(x);
-                ListaDoble.Recorrer();
-                ListaDoble.RecorrerAs(dgvLDoble);
-                ListaDoble.RecorrerDs(dgvLDoble);
-                ListaDoble.Recorrer(lstLDoble);
-                ListaDoble.Recorrer(cmbCodigo);
-
-            }
-            else
-            {
-                MessageBox.Show("Eliminado");
-                
-            }
-        }
-
-        private void frmListaDoble_Load(object sender, EventArgs e)
-        {
-            btnAgregar.Enabled = false;
-            btnEliminar.Enabled = false;
-        }
+      
 
         private void cmbCodigo_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -108,15 +102,26 @@ namespace pryEdSerna
                 btnEliminar.Enabled = false;
             }
         }
+        public void Opts()
+        {
+            if(optAscendete.Checked)
+            {
+                ListaDoble.RecorrerAs(dgvLDoble);
+                ListaDoble.RecorrerAs(dgvLDoble);
+                ListaDoble.Recorrer();
+                ListaDoble.Recorrer(lstLDoble);
+                ListaDoble.Recorrer(cmbCodigo);
+            }
+            else 
+            {
+                ListaDoble.RecorrerDs(dgvLDoble);
+                ListaDoble.RecorrerD();
+                ListaDoble.RecorrerDs(dgvLDoble);
+                ListaDoble.RecorrerD(cmbCodigo);
+                ListaDoble.RecorrerD(lstLDoble);
+            }
+        }
         
-        private void optAscendete_CheckedChanged(object sender, EventArgs e)
-        {
-            ListaDoble.RecorrerAs(dgvLDoble);
-        }
-
-        private void optDescendete_CheckedChanged(object sender, EventArgs e)
-        {
-            ListaDoble.RecorrerDs(dgvLDoble);
-        }
+       
     }
 }

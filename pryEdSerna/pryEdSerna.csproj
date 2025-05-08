@@ -53,7 +53,12 @@
     <Compile Include="clsListaSimple.cs" />
     <Compile Include="clsNodo.cs" />
     <Compile Include="clsPila.cs" />
-    <Compile Include="ClsProvincias.cs" />
+    <Compile Include="frmDias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDias.Designer.cs">
+      <DependentUpon>frmDias.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,12 +82,6 @@
     </Compile>
     <Compile Include="frmCola.Designer.cs">
       <DependentUpon>frmCola.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmDatos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmDatos.Designer.cs">
-      <DependentUpon>frmDatos.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDatosProgramador.cs">
       <SubType>Form</SubType>
@@ -122,6 +121,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmDatosProgramador.resx">
+      <DependentUpon>frmDatosProgramador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDias.resx">
+      <DependentUpon>frmDias.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmInicio.resx">
       <DependentUpon>frmInicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,14 +139,14 @@
     <EmbeddedResource Include="frmCola.resx">
       <DependentUpon>frmCola.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDatos.resx">
-      <DependentUpon>frmDatos.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmListaDoble.resx">
       <DependentUpon>frmListaDoble.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListaSimple.resx">
       <DependentUpon>frmListaSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMeses.resx">
+      <DependentUpon>frmMeses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPila.resx">
       <DependentUpon>frmPila.cs</DependentUpon>

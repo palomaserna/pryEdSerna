@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,10 +21,16 @@ namespace pryEdSerna
 
         private void frmCola_Load(object sender, EventArgs e)
         {
-            //FilaPersonas.Agregar();//Leo los datos del archivo
-            FilaPersonas.Recorrer();//Grabo archivo
-            FilaPersonas.Recorrer(dgvCola);//Muestro en grilla
-            FilaPersonas.Recorrer(lstCola);//Muestra en lista
+            if (File.Exists("Cola.csv"))
+            {
+                FilaPersonas.Agregar();
+                FilaPersonas.Recorrer();//Grabo archivo
+                FilaPersonas.Recorrer(dgvCola);//Muestro en grilla
+                FilaPersonas.Recorrer(lstCola);//Muestra en lista
+
+            }
+           
+           
 
         }
 
@@ -63,6 +70,36 @@ namespace pryEdSerna
                 lblTra.Text = "";
 
             }
+            
         }
+        private void ValidarDatosA()
+        {
+            if (txtCodigo.Text != "" && txtNombre.Text != "" && txtTramite.Text != "")
+            {
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
+        }
+      
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            ValidarDatosA();
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            ValidarDatosA();
+        }
+
+        private void txtTramite_TextChanged(object sender, EventArgs e)
+        {
+            ValidarDatosA();
+        }
+
+      
     }
 }
