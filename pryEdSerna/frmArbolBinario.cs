@@ -54,9 +54,20 @@ namespace pryEdSerna
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             Arbol.Eliminar(Convert.ToInt32(cmbCodigo.Text));
-            Arbol.Recorrer(tvArbol);
-            Arbol.Recorrer(cmbCodigo);
-            Arbol.Recorrer(dgvArbol);
+            cmbCodigo.SelectedIndex = -1;
+            if (Arbol.Raiz != null)
+            {
+                Arbol.Recorrer(tvArbol);
+                Arbol.Recorrer(cmbCodigo);
+                Arbol.Recorrer(dgvArbol);
+            }
+            else
+            {
+                tvArbol.Nodes.Clear();
+                dgvArbol.Rows.Clear();
+                cmbCodigo.Items.Clear();
+            }
+            
         }
         private void ValidarDatos()
         {
