@@ -91,5 +91,11 @@ namespace pryEdSerna
             frmArbolBinario v = new frmArbolBinario();
             v.ShowDialog();
         }
+
+        private void grafoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmGrafo g = new frmGrafo();
+            g.ShowDialog();
+        }
     }
 }

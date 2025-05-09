@@ -381,6 +381,7 @@
             this.Controls.Add(this.grpCargadDatos);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmGrafo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmGrafo";
             this.Load += new System.EventHandler(this.frmGrafo_Load);
             this.grpCargadDatos.ResumeLayout(false);

@@ -47,13 +47,13 @@
             this.listaDobleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estructurasNoLinealesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.árbolBinarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.grafoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.DarkSalmon;
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sistemaToolStripMenuItem,
@@ -62,10 +62,10 @@
             this.estructurasNoLinealesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1043, 35);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
+            this.menuStrip1.Size = new System.Drawing.Size(695, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            
             // 
             // sistemaToolStripMenuItem
             // 
@@ -75,7 +75,7 @@
             this.sistemaToolStripMenuItem.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sistemaToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.sistemaToolStripMenuItem.Name = "sistemaToolStripMenuItem";
-            this.sistemaToolStripMenuItem.Size = new System.Drawing.Size(101, 31);
+            this.sistemaToolStripMenuItem.Size = new System.Drawing.Size(73, 23);
             this.sistemaToolStripMenuItem.Text = "Sistema";
             // 
             // datosDelDesarrolladorToolStripMenuItem
@@ -83,7 +83,7 @@
             this.datosDelDesarrolladorToolStripMenuItem.BackColor = System.Drawing.Color.DarkSalmon;
             this.datosDelDesarrolladorToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.datosDelDesarrolladorToolStripMenuItem.Name = "datosDelDesarrolladorToolStripMenuItem";
-            this.datosDelDesarrolladorToolStripMenuItem.Size = new System.Drawing.Size(325, 36);
+            this.datosDelDesarrolladorToolStripMenuItem.Size = new System.Drawing.Size(226, 24);
             this.datosDelDesarrolladorToolStripMenuItem.Text = "Datos del Desarrollador";
             this.datosDelDesarrolladorToolStripMenuItem.Click += new System.EventHandler(this.datosDelDesarrolladorToolStripMenuItem_Click);
             // 
@@ -92,7 +92,7 @@
             this.salirToolStripMenuItem.BackColor = System.Drawing.Color.DarkSalmon;
             this.salirToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(325, 36);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(226, 24);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -108,7 +108,7 @@
             this.programacionOrientadaAObjetosToolStripMenuItem.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.programacionOrientadaAObjetosToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.programacionOrientadaAObjetosToolStripMenuItem.Name = "programacionOrientadaAObjetosToolStripMenuItem";
-            this.programacionOrientadaAObjetosToolStripMenuItem.Size = new System.Drawing.Size(304, 31);
+            this.programacionOrientadaAObjetosToolStripMenuItem.Size = new System.Drawing.Size(213, 23);
             this.programacionOrientadaAObjetosToolStripMenuItem.Text = "Programacion Orientada a Objetos";
             this.programacionOrientadaAObjetosToolStripMenuItem.Click += new System.EventHandler(this.programacionOrientadaAObjetosToolStripMenuItem_Click);
             // 
@@ -117,7 +117,7 @@
             this.ciudadesToolStripMenuItem.BackColor = System.Drawing.Color.DarkSalmon;
             this.ciudadesToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.ciudadesToolStripMenuItem.Name = "ciudadesToolStripMenuItem";
-            this.ciudadesToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.ciudadesToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.ciudadesToolStripMenuItem.Text = "Ciudades...";
             this.ciudadesToolStripMenuItem.Click += new System.EventHandler(this.ciudadesToolStripMenuItem_Click);
             // 
@@ -126,7 +126,7 @@
             this.provinciasToolStripMenuItem.BackColor = System.Drawing.Color.DarkSalmon;
             this.provinciasToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.provinciasToolStripMenuItem.Name = "provinciasToolStripMenuItem";
-            this.provinciasToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.provinciasToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.provinciasToolStripMenuItem.Text = "Provincias...";
             this.provinciasToolStripMenuItem.Click += new System.EventHandler(this.provinciasToolStripMenuItem_Click);
             // 
@@ -135,7 +135,7 @@
             this.mesesToolStripMenuItem.BackColor = System.Drawing.Color.DarkSalmon;
             this.mesesToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.mesesToolStripMenuItem.Name = "mesesToolStripMenuItem";
-            this.mesesToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.mesesToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.mesesToolStripMenuItem.Text = "Meses...";
             this.mesesToolStripMenuItem.Click += new System.EventHandler(this.mesesToolStripMenuItem_Click);
             // 
@@ -144,7 +144,7 @@
             this.díasToolStripMenuItem.BackColor = System.Drawing.Color.DarkSalmon;
             this.díasToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.díasToolStripMenuItem.Name = "díasToolStripMenuItem";
-            this.díasToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.díasToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.díasToolStripMenuItem.Text = "Días...";
             this.díasToolStripMenuItem.Click += new System.EventHandler(this.díasToolStripMenuItem_Click);
             // 
@@ -153,7 +153,7 @@
             this.materiasToolStripMenuItem.BackColor = System.Drawing.Color.DarkSalmon;
             this.materiasToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.materiasToolStripMenuItem.Name = "materiasToolStripMenuItem";
-            this.materiasToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.materiasToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.materiasToolStripMenuItem.Text = "Materias...";
             // 
             // carrerasToolStripMenuItem
@@ -161,7 +161,7 @@
             this.carrerasToolStripMenuItem.BackColor = System.Drawing.Color.DarkSalmon;
             this.carrerasToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.carrerasToolStripMenuItem.Name = "carrerasToolStripMenuItem";
-            this.carrerasToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.carrerasToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.carrerasToolStripMenuItem.Text = "Carreras...";
             // 
             // estructurasLinealesToolStripMenuItem
@@ -174,7 +174,7 @@
             this.estructurasLinealesToolStripMenuItem.Font = new System.Drawing.Font("Impact", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.estructurasLinealesToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.estructurasLinealesToolStripMenuItem.Name = "estructurasLinealesToolStripMenuItem";
-            this.estructurasLinealesToolStripMenuItem.Size = new System.Drawing.Size(191, 31);
+            this.estructurasLinealesToolStripMenuItem.Size = new System.Drawing.Size(136, 23);
             this.estructurasLinealesToolStripMenuItem.Text = "Estructuras Lineales";
             // 
             // colaToolStripMenuItem
@@ -182,7 +182,7 @@
             this.colaToolStripMenuItem.BackColor = System.Drawing.Color.DarkSalmon;
             this.colaToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.colaToolStripMenuItem.Name = "colaToolStripMenuItem";
-            this.colaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.colaToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.colaToolStripMenuItem.Text = "Cola...";
             this.colaToolStripMenuItem.Click += new System.EventHandler(this.colaToolStripMenuItem_Click);
             // 
@@ -191,7 +191,7 @@
             this.pilaToolStripMenuItem.BackColor = System.Drawing.Color.DarkSalmon;
             this.pilaToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.pilaToolStripMenuItem.Name = "pilaToolStripMenuItem";
-            this.pilaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.pilaToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.pilaToolStripMenuItem.Text = "Pila...";
             this.pilaToolStripMenuItem.Click += new System.EventHandler(this.pilaToolStripMenuItem_Click);
             // 
@@ -200,7 +200,7 @@
             this.listaSimpleToolStripMenuItem.BackColor = System.Drawing.Color.DarkSalmon;
             this.listaSimpleToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.listaSimpleToolStripMenuItem.Name = "listaSimpleToolStripMenuItem";
-            this.listaSimpleToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.listaSimpleToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.listaSimpleToolStripMenuItem.Text = "Lista Simple...";
             this.listaSimpleToolStripMenuItem.Click += new System.EventHandler(this.listaSimpleToolStripMenuItem_Click);
             // 
@@ -209,36 +209,45 @@
             this.listaDobleToolStripMenuItem.BackColor = System.Drawing.Color.DarkSalmon;
             this.listaDobleToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.listaDobleToolStripMenuItem.Name = "listaDobleToolStripMenuItem";
-            this.listaDobleToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.listaDobleToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
             this.listaDobleToolStripMenuItem.Text = "Lista Doble...";
             this.listaDobleToolStripMenuItem.Click += new System.EventHandler(this.listaDobleToolStripMenuItem_Click);
             // 
             // estructurasNoLinealesToolStripMenuItem
             // 
             this.estructurasNoLinealesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.árbolBinarioToolStripMenuItem});
+            this.árbolBinarioToolStripMenuItem,
+            this.grafoToolStripMenuItem});
             this.estructurasNoLinealesToolStripMenuItem.Font = new System.Drawing.Font("Impact", 10F);
             this.estructurasNoLinealesToolStripMenuItem.Name = "estructurasNoLinealesToolStripMenuItem";
-            this.estructurasNoLinealesToolStripMenuItem.Size = new System.Drawing.Size(216, 31);
+            this.estructurasNoLinealesToolStripMenuItem.Size = new System.Drawing.Size(153, 23);
             this.estructurasNoLinealesToolStripMenuItem.Text = "Estructuras No Lineales";
             // 
             // árbolBinarioToolStripMenuItem
             // 
             this.árbolBinarioToolStripMenuItem.BackColor = System.Drawing.Color.DarkSalmon;
             this.árbolBinarioToolStripMenuItem.Name = "árbolBinarioToolStripMenuItem";
-            this.árbolBinarioToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.árbolBinarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.árbolBinarioToolStripMenuItem.Text = "Árbol Binario";
             this.árbolBinarioToolStripMenuItem.Click += new System.EventHandler(this.árbolBinarioToolStripMenuItem_Click);
             // 
+            // grafoToolStripMenuItem
+            // 
+            this.grafoToolStripMenuItem.Name = "grafoToolStripMenuItem";
+            this.grafoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.grafoToolStripMenuItem.Text = "Grafo...";
+            this.grafoToolStripMenuItem.Click += new System.EventHandler(this.grafoToolStripMenuItem_Click);
+            // 
             // frmInicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1043, 450);
+            this.ClientSize = new System.Drawing.Size(695, 292);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmInicio";
             this.Text = "frmInicio";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -270,6 +279,7 @@
         private System.Windows.Forms.ToolStripMenuItem listaDobleToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estructurasNoLinealesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem árbolBinarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem grafoToolStripMenuItem;
     }
 }
 
