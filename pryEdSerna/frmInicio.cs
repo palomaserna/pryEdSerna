@@ -97,5 +97,11 @@ namespace pryEdSerna
             frmGrafo g = new frmGrafo();
             g.ShowDialog();
         }
+
+        private void mostrarTablaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBaseDatosMostrarTabla v = new frmBaseDatosMostrarTabla();
+            v.ShowDialog();
+        }
     }
 }

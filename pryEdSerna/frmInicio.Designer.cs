@@ -48,6 +48,8 @@
             this.estructurasNoLinealesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.árbolBinarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grafoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.baseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mostrarTablaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,11 +61,12 @@
             this.sistemaToolStripMenuItem,
             this.programacionOrientadaAObjetosToolStripMenuItem,
             this.estructurasLinealesToolStripMenuItem,
-            this.estructurasNoLinealesToolStripMenuItem});
+            this.estructurasNoLinealesToolStripMenuItem,
+            this.baseDeDatosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(695, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(763, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -238,16 +241,33 @@
             this.grafoToolStripMenuItem.Text = "Grafo...";
             this.grafoToolStripMenuItem.Click += new System.EventHandler(this.grafoToolStripMenuItem_Click);
             // 
+            // baseDeDatosToolStripMenuItem
+            // 
+            this.baseDeDatosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mostrarTablaToolStripMenuItem});
+            this.baseDeDatosToolStripMenuItem.Font = new System.Drawing.Font("Impact", 10F);
+            this.baseDeDatosToolStripMenuItem.Name = "baseDeDatosToolStripMenuItem";
+            this.baseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(100, 23);
+            this.baseDeDatosToolStripMenuItem.Text = "Base de Datos";
+            // 
+            // mostrarTablaToolStripMenuItem
+            // 
+            this.mostrarTablaToolStripMenuItem.BackColor = System.Drawing.Color.DarkSalmon;
+            this.mostrarTablaToolStripMenuItem.Name = "mostrarTablaToolStripMenuItem";
+            this.mostrarTablaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.mostrarTablaToolStripMenuItem.Text = "Mostrar Tabla";
+            this.mostrarTablaToolStripMenuItem.Click += new System.EventHandler(this.mostrarTablaToolStripMenuItem_Click);
+            // 
             // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(695, 292);
+            this.ClientSize = new System.Drawing.Size(763, 351);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmInicio";
             this.Text = "frmInicio";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -280,6 +300,8 @@
         private System.Windows.Forms.ToolStripMenuItem estructurasNoLinealesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem árbolBinarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem grafoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem baseDeDatosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mostrarTablaToolStripMenuItem;
     }
 }
 
