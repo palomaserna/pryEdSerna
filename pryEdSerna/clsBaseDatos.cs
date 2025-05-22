@@ -70,6 +70,32 @@ namespace pryEdSerna
                 MessageBox.Show(ex.Message);
             }
         }
+        public void Listar(DataGridView Grilla, String SQL)
+        {
+            try
+            {
+                conexion.ConnectionString = CadenaConexion;
+                conexion.Open();
+
+                comando.Connection = conexion;
+                comando.CommandType = CommandType.Text;
+                comando.CommandText = SQL;
+
+                DataSet DS = new DataSet();
+                adaptador = new OleDbDataAdapter(comando);
+                adaptador.Fill(DS, "Tabla");
+
+                Grilla.DataSource = null;
+                Grilla.DataSource = DS.Tables["Tabla"];
+
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                conexion.Close();
+                MessageBox.Show(ex.Message);
+            }
+        }
 
     }
 }
