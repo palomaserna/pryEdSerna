@@ -310,7 +310,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmArbolBinario";
-            this.Text = "frmArbolBinario";
+            this.Text = "Arbol Binario";
             this.Load += new System.EventHandler(this.frmArbolBinario_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

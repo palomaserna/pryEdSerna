@@ -138,7 +138,7 @@
             this.Controls.Add(this.btnGrabarP);
             this.Controls.Add(this.txtProvincias);
             this.Name = "frmProvincias";
-            this.Text = "frmProvincias";
+            this.Text = "Provincias";
             this.Load += new System.EventHandler(this.frmProvincias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProvincias)).EndInit();
             this.ResumeLayout(false);

@@ -15,17 +15,24 @@ namespace pryEdSerna
         public frmBaseDatosMostrarTabla()
         {
             InitializeComponent();
-        }
 
+        }
+        clsBaseDatos Bd = new clsBaseDatos();
+        private void frmBaseDatosMostrarTabla_Load(object sender, EventArgs e)
+        {
+            //cmbTabla.SelectedIndex = 0;
+            Bd.Listar(dgvBase);
+          
+        }
         private void btnMostrar_Click(object sender, EventArgs e)
         {
-            clsBaseDatos Bd=new clsBaseDatos();
+          
             Bd.Listar(cmbTabla.Text, dgvBase);
+           
         }
+        
+        
 
-        private void cmbTabla_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            cmbTabla.SelectedIndex = 0;
-        }
+        
     }
 }

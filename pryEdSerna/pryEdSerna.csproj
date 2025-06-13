@@ -55,11 +55,11 @@
     <Compile Include="clsListaSimple.cs" />
     <Compile Include="clsNodo.cs" />
     <Compile Include="clsPila.cs" />
-    <Compile Include="frmBaseDatos.cs">
+    <Compile Include="frmBaseDatosOperaciones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmBaseDatos.Designer.cs">
-      <DependentUpon>frmBaseDatos.cs</DependentUpon>
+    <Compile Include="frmBaseDatosOperaciones.Designer.cs">
+      <DependentUpon>frmBaseDatosOperaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="frmBaseDatosConsultasSQL.cs">
       <SubType>Form</SubType>
@@ -72,6 +72,12 @@
     </Compile>
     <Compile Include="frmBaseDatosMostrarTabla.Designer.cs">
       <DependentUpon>frmBaseDatosMostrarTabla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBaseDatosRepasoOperaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaseDatosRepasoOperaciones.Designer.cs">
+      <DependentUpon>frmBaseDatosRepasoOperaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDias.cs">
       <SubType>Form</SubType>
@@ -147,14 +153,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmBaseDatos.resx">
-      <DependentUpon>frmBaseDatos.cs</DependentUpon>
+    <EmbeddedResource Include="frmBaseDatosOperaciones.resx">
+      <DependentUpon>frmBaseDatosOperaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBaseDatosConsultasSQL.resx">
       <DependentUpon>frmBaseDatosConsultasSQL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBaseDatosMostrarTabla.resx">
       <DependentUpon>frmBaseDatosMostrarTabla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBaseDatosRepasoOperaciones.resx">
+      <DependentUpon>frmBaseDatosRepasoOperaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDatosProgramador.resx">
       <DependentUpon>frmDatosProgramador.cs</DependentUpon>

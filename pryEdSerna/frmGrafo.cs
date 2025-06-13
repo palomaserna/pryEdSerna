@@ -41,5 +41,54 @@ namespace pryEdSerna
             cmbOrigenCarga.SelectedIndex = 0;
             cmbDestinoCarga.SelectedIndex = 0;
         }
+
+        private void btnBorrarCarga_Click(object sender, EventArgs e)
+        {
+            Grafo.BorrarTodo();
+            Grafo.MostrarTodo(dgvGrafo);
+            MessageBox.Show("Datos eliminados");
+            txtPrecio.Text = "";
+            cmbOrigenCarga.SelectedIndex = 0;
+            cmbDestinoCarga.SelectedIndex = 0;
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            int f=cmbOrigenConsulta.SelectedIndex;
+            int c=cmbDestinoConsulta.SelectedIndex;
+            decimal precio= Grafo.Consultar(f, c);
+            MessageBox.Show($"El precio de {cmbOrigenConsulta.Text} a {cmbDestinoConsulta.Text} es de {precio}");
+            txtPrecio.Text = "";
+            cmbOrigenCarga.SelectedIndex = 0;
+            cmbDestinoCarga.SelectedIndex = 0;
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            int f = cmbOrigenConsulta.SelectedIndex;
+            int c = cmbDestinoConsulta.SelectedIndex;
+            Grafo.Eliminar(f, c);
+            MessageBox.Show($"Se elimino el viaje de {cmbOrigenConsulta.Text} a {cmbDestinoConsulta.Text}");
+            txtPrecio.Text = "";
+            cmbOrigenCarga.SelectedIndex = 0;
+            cmbDestinoCarga.SelectedIndex = 0;
+        }
+
+        private void btnDestinos_Click(object sender, EventArgs e)
+        {
+            int f=cmbOrigenListar.SelectedIndex;
+            Grafo.MostrarDestinos(f, dgvGrafo);
+        }
+
+        private void btnOrigenes_Click(object sender, EventArgs e)
+        {
+            int c=cmbDestinoListar.SelectedIndex;
+            Grafo.MostrarOrigenes(c, dgvGrafo);
+        }
+
+        private void btnVerTodo_Click(object sender, EventArgs e)
+        {
+            Grafo.MostrarTodo(dgvGrafo);
+        }
     }
 }

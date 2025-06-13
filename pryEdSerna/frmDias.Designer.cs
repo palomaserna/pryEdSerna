@@ -134,7 +134,7 @@
             this.Controls.Add(this.numDia);
             this.Controls.Add(this.lblNroDia);
             this.Name = "frmDias";
-            this.Text = "frmDias";
+            this.Text = "Días";
             this.Load += new System.EventHandler(this.frmDias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numDia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDia)).EndInit();

@@ -285,7 +285,6 @@
             this.optDescendete.TabStop = true;
             this.optDescendete.Text = "Descendete";
             this.optDescendete.UseVisualStyleBackColor = true;
-            
             // 
             // optAscendete
             // 
@@ -298,7 +297,6 @@
             this.optAscendete.TabStop = true;
             this.optAscendete.Text = "Ascendete";
             this.optAscendete.UseVisualStyleBackColor = true;
-           
             // 
             // frmListaDoble
             // 
@@ -314,7 +312,7 @@
             this.Controls.Add(this.groupBox3);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmListaDoble";
-            this.Text = "frmListaDoble";
+            this.Text = "Lista Doble";
             this.Load += new System.EventHandler(this.frmListaDoble_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);

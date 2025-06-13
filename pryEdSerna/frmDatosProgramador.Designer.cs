@@ -249,7 +249,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.grpDatos);
             this.Name = "frmDatosProgramador";
-            this.Text = "frmDatosProgramador";
+            this.Text = "Datos del Programador";
             this.grpDatos.ResumeLayout(false);
             this.grpDatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

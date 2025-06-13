@@ -19,7 +19,7 @@ namespace pryEdSerna
 
         private void frmBaseDatosConsultasSQL_Load(object sender, EventArgs e)
         {
-            
+          
         }
 
         private void btnListar_Click(object sender, EventArgs e)

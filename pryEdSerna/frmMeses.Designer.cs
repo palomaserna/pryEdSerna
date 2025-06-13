@@ -34,9 +34,9 @@
             this.btnGrabar = new System.Windows.Forms.Button();
             this.txtNombreMes = new System.Windows.Forms.TextBox();
             this.dgvMes = new System.Windows.Forms.DataGridView();
-            this.numMes = new System.Windows.Forms.NumericUpDown();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numMes = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMes)).BeginInit();
             this.SuspendLayout();
@@ -99,13 +99,6 @@
             this.dgvMes.Size = new System.Drawing.Size(393, 225);
             this.dgvMes.TabIndex = 5;
             // 
-            // numMes
-            // 
-            this.numMes.Location = new System.Drawing.Point(338, 156);
-            this.numMes.Name = "numMes";
-            this.numMes.Size = new System.Drawing.Size(166, 26);
-            this.numMes.TabIndex = 6;
-            // 
             // Column1
             // 
             this.Column1.HeaderText = "Número";
@@ -119,6 +112,13 @@
             this.Column2.MinimumWidth = 8;
             this.Column2.Name = "Column2";
             this.Column2.Width = 150;
+            // 
+            // numMes
+            // 
+            this.numMes.Location = new System.Drawing.Point(338, 156);
+            this.numMes.Name = "numMes";
+            this.numMes.Size = new System.Drawing.Size(166, 26);
+            this.numMes.TabIndex = 6;
             // 
             // frmMeses
             // 
@@ -134,7 +134,7 @@
             this.Controls.Add(this.lblNombreMes);
             this.Controls.Add(this.lblNroMes);
             this.Name = "frmMeses";
-            this.Text = "frmMeses";
+            this.Text = "Meses";
             this.Load += new System.EventHandler(this.frmMeses_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numMes)).EndInit();

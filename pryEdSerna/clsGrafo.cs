@@ -9,8 +9,8 @@ namespace pryEdSerna
 {
     internal class clsGrafo
     {
-        String[] Ciudades= new String[5] { "Cordoba", "Jesus Maria", "Carlos Paz", "Villa Maria", "Morrison" };
-        Decimal[,] Precio = new Decimal [5, 5]; 
+       private String[] Ciudades= new String[5] { "Cordoba", "Jesus Maria", "Carlos Paz", "Villa Maria", "Morrison" };
+       private Decimal[,] Precio = new Decimal [5, 5]; 
 
 
 
@@ -100,7 +100,7 @@ namespace pryEdSerna
         public void CargarCiudades(ComboBox cmb)
         {
             cmb.Items.Clear();
-            for (Int32 i = 0; i<5; i++)
+            for (Int32 i = 0; i< Ciudades.Length; i++)
             {
                 cmb.Items.Add(Ciudades[i]);
             }

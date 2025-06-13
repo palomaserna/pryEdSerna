@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBaseDatosOperaciones));
             this.dgvBaseDatos = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnJuntar = new System.Windows.Forms.Button();
@@ -49,162 +50,182 @@
             // 
             // dgvBaseDatos
             // 
+            this.dgvBaseDatos.BackgroundColor = System.Drawing.Color.OldLace;
             this.dgvBaseDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBaseDatos.Location = new System.Drawing.Point(21, 8);
-            this.dgvBaseDatos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvBaseDatos.Location = new System.Drawing.Point(73, 57);
             this.dgvBaseDatos.Name = "dgvBaseDatos";
             this.dgvBaseDatos.RowHeadersWidth = 62;
             this.dgvBaseDatos.RowTemplate.Height = 28;
-            this.dgvBaseDatos.Size = new System.Drawing.Size(704, 280);
+            this.dgvBaseDatos.Size = new System.Drawing.Size(1056, 394);
             this.dgvBaseDatos.TabIndex = 0;
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(237)))), ((int)(((byte)(220)))));
             this.groupBox1.Controls.Add(this.btnJuntar);
             this.groupBox1.Controls.Add(this.btnProyMultiatributo);
             this.groupBox1.Controls.Add(this.btnProySimple);
-            this.groupBox1.Location = new System.Drawing.Point(21, 312);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(74)))), ((int)(((byte)(64)))));
+            this.groupBox1.Location = new System.Drawing.Point(32, 480);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(203, 125);
+            this.groupBox1.Size = new System.Drawing.Size(304, 192);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Operaciones de Proyección - SELECT";
             // 
             // btnJuntar
             // 
-            this.btnJuntar.Location = new System.Drawing.Point(11, 93);
-            this.btnJuntar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJuntar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(183)))), ((int)(((byte)(164)))));
+            this.btnJuntar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnJuntar.Location = new System.Drawing.Point(16, 143);
             this.btnJuntar.Name = "btnJuntar";
-            this.btnJuntar.Size = new System.Drawing.Size(169, 20);
+            this.btnJuntar.Size = new System.Drawing.Size(254, 31);
             this.btnJuntar.TabIndex = 2;
             this.btnJuntar.Text = "Juntar";
-            this.btnJuntar.UseVisualStyleBackColor = true;
+            this.btnJuntar.UseVisualStyleBackColor = false;
             this.btnJuntar.Click += new System.EventHandler(this.btnJuntar_Click);
             // 
             // btnProyMultiatributo
             // 
-            this.btnProyMultiatributo.Location = new System.Drawing.Point(11, 61);
-            this.btnProyMultiatributo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnProyMultiatributo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(183)))), ((int)(((byte)(164)))));
+            this.btnProyMultiatributo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnProyMultiatributo.Location = new System.Drawing.Point(16, 94);
             this.btnProyMultiatributo.Name = "btnProyMultiatributo";
-            this.btnProyMultiatributo.Size = new System.Drawing.Size(169, 20);
+            this.btnProyMultiatributo.Size = new System.Drawing.Size(254, 31);
             this.btnProyMultiatributo.TabIndex = 1;
             this.btnProyMultiatributo.Text = "Proyección Multiatributo";
-            this.btnProyMultiatributo.UseVisualStyleBackColor = true;
+            this.btnProyMultiatributo.UseVisualStyleBackColor = false;
             this.btnProyMultiatributo.Click += new System.EventHandler(this.btnProyMultiatributo_Click);
             // 
             // btnProySimple
             // 
-            this.btnProySimple.Location = new System.Drawing.Point(11, 27);
-            this.btnProySimple.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnProySimple.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(183)))), ((int)(((byte)(164)))));
+            this.btnProySimple.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnProySimple.Location = new System.Drawing.Point(16, 42);
             this.btnProySimple.Name = "btnProySimple";
-            this.btnProySimple.Size = new System.Drawing.Size(169, 20);
+            this.btnProySimple.Size = new System.Drawing.Size(254, 31);
             this.btnProySimple.TabIndex = 0;
             this.btnProySimple.Text = "Proyección Simple";
-            this.btnProySimple.UseVisualStyleBackColor = true;
+            this.btnProySimple.UseVisualStyleBackColor = false;
             this.btnProySimple.Click += new System.EventHandler(this.btnProySimple_Click);
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(237)))), ((int)(((byte)(220)))));
             this.groupBox2.Controls.Add(this.btnConvolucion);
             this.groupBox2.Controls.Add(this.btnSelecMultiatributo);
             this.groupBox2.Controls.Add(this.btnSelecSimple);
-            this.groupBox2.Location = new System.Drawing.Point(306, 312);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(74)))), ((int)(((byte)(64)))));
+            this.groupBox2.Location = new System.Drawing.Point(459, 480);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox2.Size = new System.Drawing.Size(203, 125);
+            this.groupBox2.Size = new System.Drawing.Size(304, 192);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Operaciones de Selección- WHERE";
             // 
             // btnConvolucion
             // 
-            this.btnConvolucion.Location = new System.Drawing.Point(11, 93);
-            this.btnConvolucion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConvolucion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(183)))), ((int)(((byte)(164)))));
+            this.btnConvolucion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnConvolucion.Location = new System.Drawing.Point(16, 143);
             this.btnConvolucion.Name = "btnConvolucion";
-            this.btnConvolucion.Size = new System.Drawing.Size(169, 20);
+            this.btnConvolucion.Size = new System.Drawing.Size(254, 31);
             this.btnConvolucion.TabIndex = 2;
             this.btnConvolucion.Text = "Selección por convolución";
-            this.btnConvolucion.UseVisualStyleBackColor = true;
+            this.btnConvolucion.UseVisualStyleBackColor = false;
+            this.btnConvolucion.Click += new System.EventHandler(this.btnConvolucion_Click);
             // 
             // btnSelecMultiatributo
             // 
-            this.btnSelecMultiatributo.Location = new System.Drawing.Point(11, 61);
-            this.btnSelecMultiatributo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSelecMultiatributo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(183)))), ((int)(((byte)(164)))));
+            this.btnSelecMultiatributo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSelecMultiatributo.Location = new System.Drawing.Point(16, 94);
             this.btnSelecMultiatributo.Name = "btnSelecMultiatributo";
-            this.btnSelecMultiatributo.Size = new System.Drawing.Size(169, 20);
+            this.btnSelecMultiatributo.Size = new System.Drawing.Size(254, 31);
             this.btnSelecMultiatributo.TabIndex = 1;
             this.btnSelecMultiatributo.Text = "Selección Multiatributo";
-            this.btnSelecMultiatributo.UseVisualStyleBackColor = true;
+            this.btnSelecMultiatributo.UseVisualStyleBackColor = false;
+            this.btnSelecMultiatributo.Click += new System.EventHandler(this.btnSelecMultiatributo_Click);
             // 
             // btnSelecSimple
             // 
-            this.btnSelecSimple.Location = new System.Drawing.Point(11, 27);
-            this.btnSelecSimple.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSelecSimple.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(183)))), ((int)(((byte)(164)))));
+            this.btnSelecSimple.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSelecSimple.Location = new System.Drawing.Point(16, 42);
             this.btnSelecSimple.Name = "btnSelecSimple";
-            this.btnSelecSimple.Size = new System.Drawing.Size(169, 20);
+            this.btnSelecSimple.Size = new System.Drawing.Size(254, 31);
             this.btnSelecSimple.TabIndex = 0;
             this.btnSelecSimple.Text = "Selección Simple";
-            this.btnSelecSimple.UseVisualStyleBackColor = true;
+            this.btnSelecSimple.UseVisualStyleBackColor = false;
+            this.btnSelecSimple.Click += new System.EventHandler(this.btnSelecSimple_Click);
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(237)))), ((int)(((byte)(220)))));
             this.groupBox3.Controls.Add(this.btnDiferencia);
             this.groupBox3.Controls.Add(this.btnInterseccion);
             this.groupBox3.Controls.Add(this.btnUnion);
-            this.groupBox3.Location = new System.Drawing.Point(583, 312);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Font = new System.Drawing.Font("Impact", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(74)))), ((int)(((byte)(64)))));
+            this.groupBox3.Location = new System.Drawing.Point(874, 480);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox3.Size = new System.Drawing.Size(203, 125);
+            this.groupBox3.Size = new System.Drawing.Size(304, 192);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Operaciones Algebraicas";
             // 
             // btnDiferencia
             // 
-            this.btnDiferencia.Location = new System.Drawing.Point(11, 93);
-            this.btnDiferencia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDiferencia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(183)))), ((int)(((byte)(164)))));
+            this.btnDiferencia.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDiferencia.Location = new System.Drawing.Point(16, 143);
             this.btnDiferencia.Name = "btnDiferencia";
-            this.btnDiferencia.Size = new System.Drawing.Size(169, 20);
+            this.btnDiferencia.Size = new System.Drawing.Size(254, 31);
             this.btnDiferencia.TabIndex = 2;
             this.btnDiferencia.Text = "Diferencia";
-            this.btnDiferencia.UseVisualStyleBackColor = true;
+            this.btnDiferencia.UseVisualStyleBackColor = false;
+            this.btnDiferencia.Click += new System.EventHandler(this.btnDiferencia_Click);
             // 
             // btnInterseccion
             // 
-            this.btnInterseccion.Location = new System.Drawing.Point(11, 61);
-            this.btnInterseccion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInterseccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(183)))), ((int)(((byte)(164)))));
+            this.btnInterseccion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnInterseccion.Location = new System.Drawing.Point(16, 94);
             this.btnInterseccion.Name = "btnInterseccion";
-            this.btnInterseccion.Size = new System.Drawing.Size(169, 20);
+            this.btnInterseccion.Size = new System.Drawing.Size(254, 31);
             this.btnInterseccion.TabIndex = 1;
             this.btnInterseccion.Text = "Intersección";
-            this.btnInterseccion.UseVisualStyleBackColor = true;
+            this.btnInterseccion.UseVisualStyleBackColor = false;
+            this.btnInterseccion.Click += new System.EventHandler(this.btnInterseccion_Click);
             // 
             // btnUnion
             // 
-            this.btnUnion.Location = new System.Drawing.Point(11, 27);
-            this.btnUnion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUnion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(183)))), ((int)(((byte)(164)))));
+            this.btnUnion.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUnion.Location = new System.Drawing.Point(16, 42);
             this.btnUnion.Name = "btnUnion";
-            this.btnUnion.Size = new System.Drawing.Size(169, 20);
+            this.btnUnion.Size = new System.Drawing.Size(254, 31);
             this.btnUnion.TabIndex = 0;
             this.btnUnion.Text = "Unión";
-            this.btnUnion.UseVisualStyleBackColor = true;
+            this.btnUnion.UseVisualStyleBackColor = false;
+            this.btnUnion.Click += new System.EventHandler(this.btnUnion_Click);
             // 
             // frmBaseDatosOperaciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(831, 452);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1246, 695);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvBaseDatos);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmBaseDatosOperaciones";
-            this.Text = "frmBaseDatos";
+            this.Text = "BaseDatosOperaciones";
+            this.Load += new System.EventHandler(this.frmBaseDatosOperaciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBaseDatos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);

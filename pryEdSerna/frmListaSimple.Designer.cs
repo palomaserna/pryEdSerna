@@ -269,7 +269,7 @@
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmListaSimple";
-            this.Text = "frmListaSimple";
+            this.Text = "Lista Simple";
             this.Load += new System.EventHandler(this.frmListaSimple_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
