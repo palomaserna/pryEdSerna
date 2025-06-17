@@ -41,9 +41,7 @@ namespace pryEdSerna
 
         private void btnSelecSimple_Click(object sender, EventArgs e)
         {
-           
-           
-            string varSQL = "SELECT * " +
+            String varSQL = "SELECT * " +
                 "FROM LIBRO " +
                 "WHERE Precio > 800";
             BaseDatos.Listar(dgvBaseDatos, varSQL);
@@ -57,10 +55,7 @@ namespace pryEdSerna
 
         private void btnConvolucion_Click(object sender, EventArgs e)
         {
-
-          
-
-            string varSQL = "SELECT* FROM(SELECT* FROM Libro WHERE IdIdioma > 5) WHERE IdAutor > 10";
+            String varSQL = "SELECT* FROM(SELECT* FROM Libro WHERE IdIdioma > 5) WHERE IdAutor > 10";
             BaseDatos.Listar(dgvBaseDatos, varSQL);
         }
 
@@ -68,7 +63,7 @@ namespace pryEdSerna
         {
            
 
-            string varSQL =
+            String varSQL =
           "SELECT * " +
           "FROM LIBRO " +
           "WHERE IDAUTOR = 2 " +
@@ -82,7 +77,7 @@ namespace pryEdSerna
 
         private void btnInterseccion_Click(object sender, EventArgs e)
         {
-            string varSQL =
+            String varSQL =
           "SELECT * FROM Libro " +
          "WHERE IdAutor > 8 AND IdIdioma > 4";
           
@@ -91,7 +86,7 @@ namespace pryEdSerna
 
         private void btnDiferencia_Click(object sender, EventArgs e)
         {
-            string varSQL =
+            String varSQL =
            "SELECT* FROM Libro WHERE IdIdioma" +
            " NOT IN" +
            "(SELECT DISTINCT IdIdioma FROM Libro WHERE IdIdioma < 5)";

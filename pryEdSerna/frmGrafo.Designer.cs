@@ -39,6 +39,7 @@
             this.cmbOrigenCarga = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.grpConsulta = new System.Windows.Forms.GroupBox();
+            this.txtPrecioConsulta = new System.Windows.Forms.TextBox();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -58,7 +59,6 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtPrecioConsulta = new System.Windows.Forms.TextBox();
             this.grpCargadDatos.SuspendLayout();
             this.grpConsulta.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -186,6 +186,15 @@
             this.grpConsulta.TabIndex = 1;
             this.grpConsulta.TabStop = false;
             this.grpConsulta.Text = "Consulta de Datos";
+            // 
+            // txtPrecioConsulta
+            // 
+            this.txtPrecioConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(240)))), ((int)(((byte)(220)))));
+            this.txtPrecioConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(74)))), ((int)(((byte)(64)))));
+            this.txtPrecioConsulta.Location = new System.Drawing.Point(92, 142);
+            this.txtPrecioConsulta.Name = "txtPrecioConsulta";
+            this.txtPrecioConsulta.Size = new System.Drawing.Size(164, 27);
+            this.txtPrecioConsulta.TabIndex = 8;
             // 
             // btnBorrar
             // 
@@ -379,20 +388,13 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.OldLace;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(28, 51);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(296, 251);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
-            // 
-            // txtPrecioConsulta
-            // 
-            this.txtPrecioConsulta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(240)))), ((int)(((byte)(220)))));
-            this.txtPrecioConsulta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(111)))), ((int)(((byte)(74)))), ((int)(((byte)(64)))));
-            this.txtPrecioConsulta.Location = new System.Drawing.Point(92, 142);
-            this.txtPrecioConsulta.Name = "txtPrecioConsulta";
-            this.txtPrecioConsulta.Size = new System.Drawing.Size(164, 27);
-            this.txtPrecioConsulta.TabIndex = 8;
             // 
             // frmGrafo
             // 

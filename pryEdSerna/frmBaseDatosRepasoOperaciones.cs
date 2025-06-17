@@ -16,7 +16,7 @@ namespace pryEdSerna
         {
             InitializeComponent();
         }
-        clsBaseDatos BD=new clsBaseDatos();
+        clsBaseDatos BD = new clsBaseDatos();
 
         private void frmBaseDatosRepasoOperaciones_Load(object sender, EventArgs e)
         {
@@ -26,7 +26,7 @@ namespace pryEdSerna
             cmbTabla.Items.Add("Selección Simple");
             cmbTabla.Items.Add("Selección Multiatributo");
             cmbTabla.Items.Add("Selección por convolución");
-         
+
             cmbTabla.Items.Add("Unión");
             cmbTabla.Items.Add("Intersección");
             cmbTabla.Items.Add("Diferencia");
@@ -34,60 +34,76 @@ namespace pryEdSerna
 
         private void btnListar_Click(object sender, EventArgs e)
         {
+
             string operacion = cmbTabla.SelectedItem.ToString();
             string varSQL = "";
 
             if (operacion == "Proyección Simple")
             {
-                txtOperacion.Text = "Proyección simple: mostrar todos los libros";
-                varSQL = "SELECT * FROM LIBRO";
+              //  txtOperacion.Text = "Proyección simple: mostrar todos los campos del libro";
+                //varSQL = "SELECT * FROM LIBRO";
+                varSQL = "SELECT *" +
+                "FROM LIBRO";
             }
             else if (operacion == "Proyección Multiatributo")
             {
-                txtOperacion.Text = "Proyección multiatributo: Título y IdIdioma";
+                //txtOperacion.Text = "Proyección multiatributo: mostrar Título e IdIdioma";
+                //varSQL = "SELECT Titulo, IdIdioma FROM LIBRO";
                 varSQL = "SELECT Titulo, IdIdioma FROM LIBRO";
             }
             else if (operacion == "Juntar")
             {
-                txtOperacion.Text = "Juntar: Título del libro con Nombre del autor";
+               // txtOperacion.Text = "Juntar: Título del libro y Nombre del autor";
+               // varSQL = "SELECT Libro.Titulo, Autor.Nombre " +
+                 //        "FROM Libro " +
+                   //      "INNER JOIN Autor ON Libro.IdAutor = Autor.IdAutor";
                 varSQL = "SELECT Libro.Titulo, Autor.Nombre " +
-                         "FROM Libro " +
-                         "INNER JOIN Autor ON Libro.IdAutor = Autor.IdAutor";
+                "FROM Libro " +
+                "INNER JOIN Autor ON Libro.IdAutor = Autor.IdAutor";
             }
             else if (operacion == "Selección Simple")
             {
-                txtOperacion.Text = "Selección simple: Precio > 800";
-                varSQL = "SELECT * FROM LIBRO WHERE Precio > 800";
+                // txtOperacion.Text = "Selección simple: mostrar libros con Precio > 800";
+                //varSQL = "SELECT * FROM LIBRO WHERE Precio > 800";
+                varSQL = "SELECT * " +
+                "FROM LIBRO " +
+                "WHERE Precio > 800";
             }
             else if (operacion == "Selección Multiatributo")
             {
-                txtOperacion.Text = "Selección multiatributo: Precio > 700 y IdIdioma > 10";
-                varSQL = "SELECT * FROM LIBRO WHERE Precio > 700 AND IdIdioma > 10";
+                // txtOperacion.Text = "Selección multiatributo: Precio > 700 y IdIdioma > 10";
+                //varSQL = "SELECT * FROM LIBRO WHERE Precio > 700 AND IdIdioma > 10";
+                varSQL = "SELECT* FROM LIBRO WHERE Precio > 700 AND IdIdioma > 10";
             }
             else if (operacion == "Selección por Convolución")
             {
-                txtOperacion.Text = "Convolución: IdIdioma > 5 y luego IdAutor > 10";
-                varSQL = "SELECT * FROM (SELECT * FROM LIBRO WHERE IdIdioma > 5) AS Temp WHERE IdAutor > 10";
+                // txtOperacion.Text = "Convolución: primero IdIdioma > 5 y luego IdAutor > 10";
+                //varSQL = "SELECT * FROM (SELECT * FROM Libro WHERE IdIdioma > 5) WHERE IdAutor > 10";
+                varSQL = "SELECT* FROM(SELECT* FROM Libro WHERE IdIdioma > 5) WHERE IdAutor > 10";
             }
             else if (operacion == "Unión")
             {
-                txtOperacion.Text = "Unión: Libros del autor 2 o del autor 3";
-                varSQL = "SELECT * FROM LIBRO WHERE IdAutor = 2 " +
-                         "UNION " +
-                         "SELECT * FROM LIBRO WHERE IdAutor = 3";
+                //txtOperacion.Text = "Unión: libros con IdAutor = 2 o IdAutor = 3";
+                //varSQL = "SELECT * FROM LIBRO WHERE IDAUTOR = 2 " +
+                //       "UNION " +
+                //     "SELECT * FROM LIBRO WHERE IDAUTOR = 3";
+                varSQL =
+                   "SELECT * " +
+                 "FROM LIBRO " +
+       "WHERE IDAUTOR = 2 " +
+       "UNION " +
+       "SELECT * FROM LIBRO WHERE IDAUTOR = 3";
             }
             else if (operacion == "Intersección")
             {
-                txtOperacion.Text = "Intersección: Idiomas que sí tienen libros";
-                varSQL = "SELECT DISTINCT Idioma.IdIdioma, Idioma.Nombre " +
-                         "FROM Idioma " +
-                         "INNER JOIN Libro ON Idioma.IdIdioma = Libro.IdIdioma";
+                txtOperacion.Text = "Intersección: libros con IdAutor > 8 y IdIdioma > 4";
+                varSQL = "SELECT * FROM Libro WHERE IdAutor > 8 AND IdIdioma > 4";
             }
             else if (operacion == "Diferencia")
             {
-                txtOperacion.Text = "Diferencia: Idiomas que no tienen libros";
-                varSQL = "SELECT IdIdioma, Nombre FROM Idioma " +
-                         "WHERE IdIdioma NOT IN (SELECT DISTINCT IdIdioma FROM Libro)";
+                txtOperacion.Text = "Diferencia: libros con IdIdioma no menor a 5";
+                varSQL = "SELECT * FROM Libro WHERE IdIdioma NOT IN " +
+                         "(SELECT DISTINCT IdIdioma FROM Libro WHERE IdIdioma < 5)";
             }
             else
             {
@@ -98,6 +114,8 @@ namespace pryEdSerna
 
             BD.Listar(dgvConsulta, varSQL);
         }
+
     }
+    
 }
 
