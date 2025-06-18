@@ -40,59 +40,55 @@ namespace pryEdSerna
 
             if (operacion == "Proyección Simple")
             {
-              //  txtOperacion.Text = "Proyección simple: mostrar todos los campos del libro";
-                //varSQL = "SELECT * FROM LIBRO";
+                txtOperacion.Text = "Proyección simple: mostrar todos los campos del libro";
+                
                 varSQL = "SELECT *" +
                 "FROM LIBRO";
             }
             else if (operacion == "Proyección Multiatributo")
             {
-                //txtOperacion.Text = "Proyección multiatributo: mostrar Título e IdIdioma";
-                //varSQL = "SELECT Titulo, IdIdioma FROM LIBRO";
+                txtOperacion.Text = "Proyección multiatributo: mostrar Título e IdIdioma";
+               
                 varSQL = "SELECT Titulo, IdIdioma FROM LIBRO";
             }
             else if (operacion == "Juntar")
             {
-               // txtOperacion.Text = "Juntar: Título del libro y Nombre del autor";
-               // varSQL = "SELECT Libro.Titulo, Autor.Nombre " +
-                 //        "FROM Libro " +
-                   //      "INNER JOIN Autor ON Libro.IdAutor = Autor.IdAutor";
+                txtOperacion.Text = "Juntar: Título del libro y Nombre del autor";
+               
                 varSQL = "SELECT Libro.Titulo, Autor.Nombre " +
                 "FROM Libro " +
                 "INNER JOIN Autor ON Libro.IdAutor = Autor.IdAutor";
             }
             else if (operacion == "Selección Simple")
             {
-                // txtOperacion.Text = "Selección simple: mostrar libros con Precio > 800";
-                //varSQL = "SELECT * FROM LIBRO WHERE Precio > 800";
+                txtOperacion.Text = "Selección simple: mostrar libros con Precio > 800";
+               
                 varSQL = "SELECT * " +
                 "FROM LIBRO " +
                 "WHERE Precio > 800";
             }
             else if (operacion == "Selección Multiatributo")
             {
-                // txtOperacion.Text = "Selección multiatributo: Precio > 700 y IdIdioma > 10";
-                //varSQL = "SELECT * FROM LIBRO WHERE Precio > 700 AND IdIdioma > 10";
+                txtOperacion.Text = "Selección multiatributo: Precio > 700 y IdIdioma > 10";
+               
                 varSQL = "SELECT* FROM LIBRO WHERE Precio > 700 AND IdIdioma > 10";
             }
             else if (operacion == "Selección por Convolución")
             {
-                // txtOperacion.Text = "Convolución: primero IdIdioma > 5 y luego IdAutor > 10";
-                //varSQL = "SELECT * FROM (SELECT * FROM Libro WHERE IdIdioma > 5) WHERE IdAutor > 10";
+                 txtOperacion.Text = "Convolución: primero IdIdioma > 5 y luego IdAutor > 10";
+               
                 varSQL = "SELECT* FROM(SELECT* FROM Libro WHERE IdIdioma > 5) WHERE IdAutor > 10";
             }
             else if (operacion == "Unión")
             {
-                //txtOperacion.Text = "Unión: libros con IdAutor = 2 o IdAutor = 3";
-                //varSQL = "SELECT * FROM LIBRO WHERE IDAUTOR = 2 " +
-                //       "UNION " +
-                //     "SELECT * FROM LIBRO WHERE IDAUTOR = 3";
+                txtOperacion.Text = "Unión: libros con IdAutor = 2 o IdAutor = 3";
+                
                 varSQL =
                    "SELECT * " +
                  "FROM LIBRO " +
-       "WHERE IDAUTOR = 2 " +
-       "UNION " +
-       "SELECT * FROM LIBRO WHERE IDAUTOR = 3";
+                "WHERE IDAUTOR = 2 " +
+                "UNION " +
+                "SELECT * FROM LIBRO WHERE IDAUTOR = 3";
             }
             else if (operacion == "Intersección")
             {
